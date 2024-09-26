@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: estettle <stettler.etan@protonmail.com>    +#+  +:+       +#+        */
+/*   By: estettle <estettle@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/24 23:37:47 by estettle          #+#    #+#             */
-/*   Updated: 2024/09/24 23:52:04 by estettle         ###   ########.fr       */
+/*   Created: 2024/09/26 10:55:42 by estettle          #+#    #+#             */
+/*   Updated: 2024/09/26 10:55:44 by estettle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

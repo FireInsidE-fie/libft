@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: estettle <stettler.etan@protonmail.com>    +#+  +:+       +#+        */
+/*   By: estettle <estettle@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/24 19:46:43 by estettle          #+#    #+#             */
-/*   Updated: 2024/09/24 23:22:45 by estettle         ###   ########.fr       */
+/*   Created: 2024/09/26 10:55:17 by estettle          #+#    #+#             */
+/*   Updated: 2024/09/26 10:55:18 by estettle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

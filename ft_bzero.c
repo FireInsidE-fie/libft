@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: estettle <stettler.etan@protonmail.com>    +#+  +:+       +#+        */
+/*   By: estettle <estettle@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/25 00:08:49 by estettle          #+#    #+#             */
-/*   Updated: 2024/09/25 00:10:22 by estettle         ###   ########.fr       */
+/*   Created: 2024/09/26 10:55:05 by estettle          #+#    #+#             */
+/*   Updated: 2024/09/26 10:55:07 by estettle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

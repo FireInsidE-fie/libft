@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: estettle <stettler.etan@protonmail.com>    +#+  +:+       +#+        */
+/*   By: estettle <estettle@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/24 23:33:36 by estettle          #+#    #+#             */
-/*   Updated: 2024/09/24 23:36:02 by estettle         ###   ########.fr       */
+/*   Created: 2024/09/26 10:55:24 by estettle          #+#    #+#             */
+/*   Updated: 2024/09/26 10:55:28 by estettle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

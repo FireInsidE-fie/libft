@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: estettle <stettler.etan@protonmail.com>    +#+  +:+       +#+        */
+/*   By: estettle <estettle@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/26 10:12:08 by estettle          #+#    #+#             */
-/*   Updated: 2024/09/26 10:14:20 by estettle         ###   ########.fr       */
+/*   Created: 2024/09/26 10:56:09 by estettle          #+#    #+#             */
+/*   Updated: 2024/09/26 10:56:10 by estettle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

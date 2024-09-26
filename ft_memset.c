@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: estettle <stettler.etan@protonmail.com>    +#+  +:+       +#+        */
+/*   By: estettle <estettle@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/25 00:06:01 by estettle          #+#    #+#             */
-/*   Updated: 2024/09/25 00:08:07 by estettle         ###   ########.fr       */
+/*   Created: 2024/09/26 10:55:50 by estettle          #+#    #+#             */
+/*   Updated: 2024/09/26 10:55:53 by estettle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
