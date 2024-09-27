@@ -10,7 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-void	bzero(void *s, unsigned int n)
+#include <stdio.h>
+
+void	bzero(void *s, t_size n)
 {
 	if (n > 0)
 	{
