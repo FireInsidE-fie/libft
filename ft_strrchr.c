@@ -6,7 +6,7 @@
 /*   By: estettle <estettle@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/26 10:56:03 by estettle          #+#    #+#             */
-/*   Updated: 2024/09/26 10:56:04 by estettle         ###   ########.fr       */
+/*   Updated: 2024/09/27 21:45:29 by estettle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ char	*ft_strrchr(const char *s, int c)
 		s--;
 		str_length--;
 		if (*s == c)
-			return s;
+			return (s);
 	}
 	return (NULL);
 }
