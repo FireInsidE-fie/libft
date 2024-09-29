@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: estettle <estettle@student.42lausanne.ch>  +#+  +:+       +#+        */
+/*   By: estettle <estettle@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/28 11:31:11 by estettle          #+#    #+#             */
-/*   Updated: 2024/09/28 12:14:58 by estettle         ###   ########.fr       */
+/*   Updated: 2024/09/29 08:49:12 by estettle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 				return (haystack);
 			j++;
 			if (haystack[j] != needle[j])
-				break;
+				break ;
 		}
 		haystack++;
 		i++;

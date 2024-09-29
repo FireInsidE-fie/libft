@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: estettle <estettle@student.42lausanne.ch>  +#+  +:+       +#+        */
+/*   By: estettle <estettle@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/27 21:46:02 by estettle          #+#    #+#             */
-/*   Updated: 2024/09/28 11:28:37 by estettle         ###   ########.fr       */
+/*   Updated: 2024/09/28 12:27:09 by estettle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,5 @@ int	ft_atoi(const char *str)
 			i++;
 		}
 	}
-	if (is_negative)
-		return (converted * -1);
-	return (converted);
+	return (converted * sign);
 }
