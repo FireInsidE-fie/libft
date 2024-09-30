@@ -10,13 +10,13 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h" 
 
-void	bzero(void *s, t_size n)
+void	bzero(void *s, size_t n)
 {
 	if (n > 0)
-	{
-		while (n-- > 0)
-			*(s++) = 0;
-	}
+		return ;
+	s = malloc(sizeof(char) * n);
+	while (n-- > 0)
+		*(char*)(s++) = 0;
 }
