@@ -1,25 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: estettle <stettle.etan@protonmail.com>     +#+  +:+       +#+        */
+/*   By: estettle <stettler.etan@protonmail.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/01 09:30:42 by estettle          #+#    #+#             */
-/*   Updated: 2024/10/01 13:53:56 by estettle         ###   ########.fr       */
+/*   Created: 2024/10/01 13:44:42 by estettle          #+#    #+#             */
+/*   Updated: 2024/10/01 13:53:03 by estettle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft.h"
 
-// libraries
-# include <stdio.h>
-# include <stdlib.h>
-# include <string.h>
+void	*calloc(size_t count, size_t size)
+{
+	void	*area;
+	size_t	b_size;
 
-// functions
-void			ft_bzero(void *s, size_t n);
-unsigned int	ft_strlen(const char *s);
-
-#endif
+	b_size = count * size;
+	area = malloc(b_size);
+	if (!area)
+		return (NULL);
+	ft_bzero(area, b_size);
+	return (area);
+}
