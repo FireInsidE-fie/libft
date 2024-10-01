@@ -18,5 +18,5 @@ void	bzero(void *s, size_t n)
 		return ;
 	s = malloc(sizeof(char) * n);
 	while (n-- > 0)
-		*(char*)(s++) = 0;
+		*(char *)(s++) = 0;
 }

@@ -23,13 +23,13 @@ char	*ft_strrchr(const char *s, int c)
 		s++;
 	}
 	if (*s == c)
-		return ((char*)s);
+		return ((char *)s);
 	while (str_length >= 0)
 	{
 		s--;
 		str_length--;
 		if (*s == c)
-			return ((char*)s);
+			return ((char *)s);
 	}
 	return (NULL);
 }
