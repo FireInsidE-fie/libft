@@ -14,9 +14,24 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	if (n > 0)
+	if (n == 0)
 		return ;
-	s = malloc(sizeof(char) * n);
 	while (n-- > 0)
 		*(char *)(s++) = 0;
+}
+
+int	main(void)
+{
+	char	*melody = malloc(100);
+	char	*roxy = malloc(100);
+
+	printf("[!] Testing ft_bzero()...\n");
+	melody = "wow";
+	//bzero(melody, 3);
+	roxy = "wow";
+	ft_bzero(roxy, 3);
+	printf("[Test 1] : %s\t%s\n", melody, roxy);
+	roxy = "wow";
+	ft_bzero(roxy, 0);
+	printf("[Test 2] : %s\t%s\n", melody, roxy);
 }

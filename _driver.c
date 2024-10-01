@@ -14,10 +14,12 @@
 
 int	main(void)
 {
-	char	*melody;
-	char	*roxy;
+	void	*melody = malloc(100);
+	void	*roxy = malloc(100);
 	//int		*alis;
 	
+	printf("[!] - Starting tests for part 1 functions...\n");
+
 	printf("[?] - Tests structure : expected value \\t actual value\n");
 
 	printf("[!] Testing ft_atoi()...\n");
@@ -28,10 +30,13 @@ int	main(void)
 
 	printf("[!] Testing ft_bzero()...\n");
 	melody = "wow";
-	ft_bzero(melody, 3);
+	bzero(melody, 3);
 	roxy = "wow";
 	ft_bzero(roxy, 3);
 	printf("[Test 1] : %s\t%s\n", melody, roxy);
+	roxy = "wow";
+	ft_bzero(roxy, 0);
+	printf("[Test 2] : %s\t%s\n", melody, roxy);
 /*
 	printf("[!] Testing ft_calloc()...\n");
 	printf("[Test 1] : %s\t%s\n");
