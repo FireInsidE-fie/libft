@@ -36,7 +36,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	}
 	return (original);
 }
-
+/*
 int	main(void)
 {
 	char	*melody = "Can. You. Hear. Me?";
@@ -51,3 +51,4 @@ int	main(void)
 	printf("%s\n", ft_memmove(roxy+10, roxy, 19));
 	printf("%s\n%s\n", melody, roxy);
 }
+*/

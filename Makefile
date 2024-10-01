@@ -5,7 +5,8 @@ RM=rm
 RMFLAGS=-f
 AR=ar
 ARFLAGS=-rc
-SRCS=ft_atoi.c \
+SRCS=_driver.c \
+	 ft_atoi.c \
 	 ft_bzero.c \
 	 ft_calloc.c \
 	 ft_isalnum.c \
@@ -42,4 +43,6 @@ fclean: clean
 	$(RM) $(RMFLAGS) $(NAME)
 re: fclean all
 
+debug: $(OBJS)
+	$(CC) $(CFLAGS) -include $(INCL) -o $@ $^
 .PHONY: all clean fclean re

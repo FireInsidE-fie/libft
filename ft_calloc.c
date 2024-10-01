@@ -6,13 +6,13 @@
 /*   By: estettle <stettler.etan@protonmail.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/01 13:44:42 by estettle          #+#    #+#             */
-/*   Updated: 2024/10/01 13:53:03 by estettle         ###   ########.fr       */
+/*   Updated: 2024/10/01 15:04:13 by estettle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*calloc(size_t count, size_t size)
+void	*ft_calloc(size_t count, size_t size)
 {
 	void	*area;
 	size_t	b_size;
