@@ -1,3 +1,4 @@
 use type_t when applicable instead of an unsigned int
 add a header with stdio and other stuff (?)
 stop using restrict keyword and remove any existing one
+test everything, obviously
