@@ -2,7 +2,7 @@ NAME=libft.a
 CC=cc
 CFLAGS=-Wall -Wextra -Werror
 RM=rm
-RMFLAGS=-rf
+RMFLAGS=-f
 AR=ar
 ARFLAGS=-rcs
 SRCS=ft_atoi.c ft_bzero.c ft_isalnum.c ft_isalpha.c ft_isascii.c \
@@ -15,9 +15,9 @@ INCL=libft.h
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	$(AR) $(ARFLAGS) $(OBJS)
+	$(AR) $(ARFLAGS) $@ $^
 %.o: %.c
-	$(CC) $(CFLAGS) -I$(INCL) -c -o $@ $< 
+	$(CC) $(CFLAGS) -include $(INCL) -c $< -o $@ 
 clean:
 	$(RM) $(RMFLAGS) $(OBJS)
 fclean: clean
