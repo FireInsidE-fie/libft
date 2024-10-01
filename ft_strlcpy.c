@@ -1,24 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: estettle <stettle.etan@protonmail.com>     +#+  +:+       +#+        */
+/*   By: estettle <stettler.etan@protonmail.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/01 09:30:42 by estettle          #+#    #+#             */
-/*   Updated: 2024/10/01 13:04:40 by estettle         ###   ########.fr       */
+/*   Created: 2024/10/01 12:49:44 by estettle          #+#    #+#             */
+/*   Updated: 2024/10/01 13:05:34 by estettle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft.h"
 
-// libraries
-# include <stdio.h>
-# include <stdlib.h>
-# include <string.h>
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
+{
+	size_t	i;
 
-// functions
-unsigned int	ft_strlen(const char *s);
-
-#endif
+	i = 0;
+	while (i < dstsize)
+	{
+		dst[i] = src[i];
+		i++;
+	}
+	dst[i] = '\0';
+	return (ft_strlen(dst) + ft_strlen(src));
+}
