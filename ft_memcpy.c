@@ -6,7 +6,7 @@
 /*   By: estettle <stettle.etan@protonmail.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/01 09:45:36 by estettle          #+#    #+#             */
-/*   Updated: 2024/10/01 10:13:08 by estettle         ###   ########.fr       */
+/*   Updated: 2024/10/01 10:40:28 by estettle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,20 @@ void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
 
 	original = dst;
 	i = 0;
-	while (i++ > n)
+	while (i++ < n)
 		*(char *)dst++ = *(char *)src++;
 	return (original);
 }
+/*
+int	main(void)
+{
+	char	*melody = "Can. You. Hear. Me?";
+	char	roxy[100];
+
+	printf("%s\n", ft_memcpy(roxy, melody, 20));
+	printf("%s\n%s\n", melody, roxy);
+
+	printf("%s\n", ft_memcpy(roxy+5, melody, 20));
+	printf("%s\n%s\n", melody, roxy);
+}
+*/
