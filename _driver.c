@@ -15,7 +15,7 @@
 // libraries needed for testing only
 #include <ctype.h>
 #include <stdio.h>
-#include <string.h>
+#include <bsd/string.h>
 
 int	main(void)
 {
@@ -112,11 +112,12 @@ int	main(void)
 	printf("[Test 2] : %s\t-\t%s\n", strdup(melody), ft_strdup(melody));
 
 	printf("[!] Testing ft_strlcat()...\n");
-	melody = "Can. You. ";
-	const char	*test_src = "Hear. Me?";
-	strlcat(melody, test_src, 15);
-	//ft_strlcat(roxy, "Hear. Me?", 11);
-	printf("[Test 1] : %s\t-\t%s\n", (char *)melody, (char *)roxy);
+	char	cat1[100] = "Can. You. ";
+	char	cat2[100] = "Hear. Me?";
+	char	cat3[100] = "Can. You. ";
+	strlcat(cat1, cat2, 15);
+	ft_strlcat(cat3, cat2, 15);
+	printf("[Test 1] : %s\t-\t%s\n", cat1, cat3);
 /*
 	printf("[!] Testing ft_strlcpy()...\n");
 	printf("[Test 1] : %s\t-\t%s\n");

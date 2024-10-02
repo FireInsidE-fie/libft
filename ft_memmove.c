@@ -19,9 +19,10 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 
 	original = (void *)src;
 	// check if src and dst overlap and if src is BEFORE dst
-	i = dst - src;
-	if (i < 0)
-		i = -i;
+	if (src >= dst)
+		i = src - dst;
+	else
+		i = dst - src;
 	if (i <= len)
 	{
 		i = len;
