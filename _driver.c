@@ -6,7 +6,7 @@
 /*   By: estettle <stettler.etan@protonmail.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/01 14:32:05 by estettle          #+#    #+#             */
-/*   Updated: 2024/10/02 12:29:25 by estettle         ###   ########.fr       */
+/*   Updated: 2024/10/02 13:51:08 by estettle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,9 +83,9 @@ int	main(void)
 	alis = 'C';
 	printf("[Test 1] : %d\t-\t%d\n", isprint(alis), ft_isprint(alis));
 	alis = '\0';
-	printf("[Test 1] : %d\t-\t%d\n", isprint(alis), ft_isprint(alis));
+	printf("[Test 2] : %d\t-\t%d\n", isprint(alis), ft_isprint(alis));
 	alis = '9';
-	printf("[Test 1] : %d\t-\t%d\n", isprint(alis), ft_isprint(alis));
+	printf("[Test 3] : %d\t-\t%d\n", isprint(alis), ft_isprint(alis));
 /*
 	printf("[!] Testing ft_memchr()...\n");
 	printf("[Test 1] : %s\t-\t%s\n");
@@ -113,9 +113,9 @@ int	main(void)
 
 	printf("[!] Testing ft_strlcat()...\n");
 	melody = "Can. You. ";
-	roxy = "Can. You. ";
-	strlcat(melody, "Hear. Me?", 5);
-	//ft_strlcat(roxy, "Hear. Me?", 5);
+	const char	*test_src = "Hear. Me?";
+	strlcat(melody, test_src, 15);
+	//ft_strlcat(roxy, "Hear. Me?", 11);
 	printf("[Test 1] : %s\t-\t%s\n", (char *)melody, (char *)roxy);
 /*
 	printf("[!] Testing ft_strlcpy()...\n");
@@ -143,5 +143,31 @@ int	main(void)
 
 	printf("[!] Testing ft_toupper()...\n");
 	printf("[Test 1] : %s\t-\t%s\n");
+
+	printf("[!] - Starting tests for part 2 functions...\n");
+
+	// ft_substr()
+	// ft_strjoin()
+	// ft_strtrim()
+	// ft_split()
+	// ft_itoa()
+	// ft_strmapi()
+	// ft_striteri()
+	// ft_putchar_fd()
+	// ft_putstr_fd()
+	// ft_putendl_fd()
+	// ft_putnbr_fd()
+
+	printf("[!] - Starting tests for bonus part functions...\n");
+
+	// ft_lstnew()
+	// ft_lstadd_front()
+	// ft_lstsize()
+	// ft_lstlast()
+	// ft_lstadd_back()
+	// ft_lstdelone()
+	// ft_lstclear()
+	// ft_lstiter()
+	// ft_lstmap()
 */
 }
