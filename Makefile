@@ -44,5 +44,5 @@ fclean: clean
 re: fclean all
 
 debug: $(OBJS) _driver.c
-	$(CC) $(CFLAGS) -include $(INCL) -o $@ $^
+	$(CC) $(CFLAGS) -include $(INCL) -o $@ $^ -lbsd
 .PHONY: all clean fclean re
