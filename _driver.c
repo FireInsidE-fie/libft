@@ -15,7 +15,7 @@
 // libraries needed for testing only
 #include <ctype.h>
 #include <stdio.h>
-#include <bsd/string.h>
+#include <string.h>
 
 int	main(void)
 {
@@ -86,13 +86,24 @@ int	main(void)
 	printf("[Test 2] : %d\t-\t%d\n", isprint(alis), ft_isprint(alis));
 	alis = '9';
 	printf("[Test 3] : %d\t-\t%d\n", isprint(alis), ft_isprint(alis));
-/*
+
 	printf("[!] Testing ft_memchr()...\n");
-	printf("[Test 1] : %s\t-\t%s\n");
+	melody = "Can. You. Hear. Me?";
+	printf("[Test 1] : %s\t-\t%s\n", (char *)memchr(melody, 'Y', 20), (char *)ft_memchr(melody, 'Y', 20));
+	printf("[Test 2] : %s\t-\t%s\n", (char *)memchr(melody, '.', 1), (char *)ft_memchr(melody, '.', 1));
+	printf("[Test 3] : %s\t-\t%s\n", (char *)memchr(melody, '.', 10), (char *)ft_memchr(melody, '.', 10));
 
 	printf("[!] Testing ft_memcmp()...\n");
-	printf("[Test 1] : %s\t-\t%s\n");
-
+	melody = "Can. You. Hear. Me?";
+	roxy = "Can. You! Hear. Me:";
+	printf("[Test 1] : %d\t-\t%d\n", memcmp(melody, roxy, 15), ft_memcmp(melody, roxy, 15));
+	melody = "Can. You. Hear. Me?";
+	roxy = "";
+	printf("[Test 2] : %d\t-\t%d\n", memcmp(melody, roxy, 10), ft_memcmp(melody, roxy, 10));
+	melody = "Can. You. Hear. Me?";
+	roxy = "Can. You. Hear. Me!";
+	printf("[Test 3] : %d\t-\t%d\n", memcmp(melody, roxy, 10), ft_memcmp(melody, roxy, 10));
+/*
 	printf("[!] Testing ft_memcpy()...\n");
 	printf("[Test 1] : %s\t-\t%s\n");
 
@@ -101,10 +112,13 @@ int	main(void)
 
 	printf("[!] Testing ft_memset()...\n");
 	printf("[Test 1] : %s\t-\t%s\n");
-
-	printf("[!] Testing ft_strchr()...\n");
-	printf("[Test 1] : %s\t-\t%s\n");
 */
+	printf("[!] Testing ft_strchr()...\n");
+	melody = "Can. You. Hear. Me?";
+	printf("[Test 1] : %s\t-\t%s\n", (char *)memchr(melody, 'Y', 20), (char *)ft_memchr(melody, 'Y', 20));
+	printf("[Test 2] : %s\t-\t%s\n", (char *)memchr(melody, '.', 1), (char *)ft_memchr(melody, '.', 1));
+	printf("[Test 3] : %s\t-\t%s\n", (char *)memchr(melody, '.', 10), (char *)ft_memchr(melody, '.', 10));
+
 	printf("[!] Testing ft_strdup()...\n");
 	melody = "Can. You. Hear. Me?";
 	printf("[Test 1] : %s\t-\t%s\n", strdup(melody), ft_strdup(melody));
@@ -118,6 +132,12 @@ int	main(void)
 	strlcat(cat1, cat2, 15);
 	ft_strlcat(cat3, cat2, 15);
 	printf("[Test 1] : %s\t-\t%s\n", cat1, cat3);
+	char	cat4[100] = "";
+	char	cat5[100] = "wow this is great";
+	char	cat6[100] = "";
+	strlcat(cat4, cat5, 15);
+	ft_strlcat(cat6, cat5, 15);
+	printf("[Test 2] : %s\t-\t%s\n", cat4, cat6);
 /*
 	printf("[!] Testing ft_strlcpy()...\n");
 	printf("[Test 1] : %s\t-\t%s\n");
@@ -129,10 +149,18 @@ int	main(void)
 	printf("[Test 2] : %zu\t-\t%zu\n", strlen(melody), ft_strlen(melody));
 	melody = "Can. You. Hear. Me?";
 	printf("[Test 3] : %zu\t-\t%zu\n", strlen(melody), ft_strlen(melody));
-/*
-	printf("[!] Testing ft_strncmp()...\n");
-	printf("[Test 1] : %s\t-\t%s\n");
 
+	printf("[!] Testing ft_strncmp()...\n");
+	melody = "Can. You. Hear. Me?";
+	roxy = "Can. You! Hear. Me:";
+	printf("[Test 1] : %d\t-\t%d\n", strncmp(melody, roxy, 15), ft_strncmp(melody, roxy, 15));
+	melody = "Can. You. Hear. Me?";
+	roxy = "";
+	printf("[Test 2] : %d\t-\t%d\n", strncmp(melody, roxy, 10), ft_strncmp(melody, roxy, 10));
+	melody = "Can. You. Hear. Me?";
+	roxy = "Can. You. Hear. Me!";
+	printf("[Test 3] : %d\t-\t%d\n", strncmp(melody, roxy, 10), ft_strncmp(melody, roxy, 10));
+/*
 	printf("[!] Testing ft_strnstr()...\n");
 	printf("[Test 1] : %s\t-\t%s\n");
 
