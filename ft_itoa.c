@@ -35,7 +35,6 @@ int static	ft_get_char_count(int n)
 char	*ft_itoa(int n)
 {
 	int		char_count;
-	int		i;
 	char	*str;
 	int		is_negative;
 
@@ -53,10 +52,9 @@ char	*ft_itoa(int n)
 		n = -n;
 		is_negative = 1;
 	}
-	i = char_count;
-	while (i-- > (0 + is_negative))
+	while (char_count-- > (0 + is_negative))
 	{
-		str[i] = (n % 10) + '0';
+		str[char_count] = (n % 10) + '0';
 		n /= 10;
 	}
 	return (str);
