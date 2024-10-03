@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-int static	ft_get_char_count(int n)
+static int	ft_get_char_count(int n)
 {
 	int	i;
 	int	count;
