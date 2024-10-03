@@ -10,6 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*trimmed;
@@ -18,7 +20,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int		prefix_nb;
 	int		suffix_nb;
 
-	trimmed = 0;
 	s1_length = ft_strlen(s1);
 	prefix_nb = 0;
 	while (s1[prefix_nb])
@@ -48,6 +49,17 @@ char	*ft_strtrim(char const *s1, char const *set)
 			break ;
 		suffix_nb++;
 	}
-	ft_strlcpy(trimmed, s1 + prefix_nb, s1_length - suffix_nb);
+	trimmed = malloc(s1_length - prefix_nb - suffix_nb);
+	if (!trimmed)
+		return (NULL);
+	ft_strlcpy(trimmed, s1 + prefix_nb, s1_length - prefix_nb - suffix_nb);
 	return (trimmed);
 }
+/*
+#include <stdio.h>
+
+int	main(void)
+{
+	printf("[Test 4] : %s\n", ft_strtrim("4312", "1234"));
+}
+*/

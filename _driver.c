@@ -172,12 +172,18 @@ int	main(void)
 
 	printf("[!] Testing ft_toupper()...\n");
 	printf("[Test 1] : %s\t-\t%s\n");
-
+*/
 	printf("[!] - Starting tests for part 2 functions...\n");
 
 	// ft_substr()
 	// ft_strjoin()
-	// ft_strtrim()
+
+	printf("[!] Testing ft_strtrim()...\n");
+	printf("[Test 1] : %s\n", ft_strtrim("1234Can. You. Hear. Me?4312", "1234"));
+	printf("[Test 2] : %s\n", ft_strtrim("wowwow1234Can. You. Hear. Me?4312", "1234"));
+	printf("[Test 3] : %s\n", ft_strtrim("12934Can. You. Hear. Me?43125", "1234"));
+	printf("[Test 4] : %s\n", ft_strtrim("4312", "1234"));
+
 	// ft_split()
 	// ft_itoa()
 	// ft_strmapi()
@@ -186,7 +192,7 @@ int	main(void)
 	// ft_putstr_fd()
 	// ft_putendl_fd()
 	// ft_putnbr_fd()
-
+/*
 	printf("[!] - Starting tests for bonus part functions...\n");
 
 	// ft_lstnew()
