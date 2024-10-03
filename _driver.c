@@ -183,6 +183,8 @@ int	main(void)
 	printf("[Test 2] : %s\n", ft_strtrim("wowwow1234Can. You. Hear. Me?4312", "1234"));
 	printf("[Test 3] : %s\n", ft_strtrim("12934Can. You. Hear. Me?43125", "1234"));
 	printf("[Test 4] : %s\n", ft_strtrim("4312", "1234"));
+	printf("[Test 5] : %s\n", ft_strtrim("43126", "1234"));
+	printf("[Test 6] : %s\n", ft_strtrim("64312", "1234"));
 
 	// ft_split()
 	// ft_itoa()

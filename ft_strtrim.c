@@ -21,33 +21,25 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int		suffix_nb;
 
 	s1_length = ft_strlen(s1);
-	prefix_nb = 0;
-	while (s1[prefix_nb])
+	prefix_nb = -1;
+	while (s1[++prefix_nb]) // create a get prefix nb function
 	{
-		i = 0;
-		while (set[i])
-		{
+		i = -1;
+		while (set[++i])
 			if (s1[prefix_nb] == set[i])
 				break ;
-			i++;
-		}
 		if (!set[i])
 			break ;
-		prefix_nb++;
 	}
-	suffix_nb = 0;
-	while (s1[s1_length - suffix_nb - 1])
+	suffix_nb = -1;
+	while (s1[s1_length - ++suffix_nb - 1]) // create a get suffix nb function
 	{
-		i = 0;
-		while (set[i])
-		{
+		i = -1;
+		while (set[++i])
 			if (s1[s1_length - suffix_nb - 1] == set[i])
 				break ;
-			i++;
-		}
 		if (!set[i])
 			break ;
-		suffix_nb++;
 	}
 	trimmed = malloc(s1_length - prefix_nb - suffix_nb);
 	if (!trimmed)
