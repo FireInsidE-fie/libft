@@ -6,21 +6,20 @@
 /*   By: estettle <estettle@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/03 10:55:14 by estettle          #+#    #+#             */
-/*   Updated: 2024/10/03 10:55:26 by estettle         ###   ########.fr       */
+/*   Updated: 2024/10/04 09:16:52 by estettle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	**ft_split(char const *s, char c)
+static char	**alloc_slices(char const *s, char c)
 {
-	unsigned int	i;
-	unsigned int	j;
-	unsigned int	slice_count;
-	char			**slices;
+	int		i;
+	int		slice_count;
+	char	**slices;
 
-	i = 0;
 	slice_count = 1;
+	i = 0;
 	while (s[i++])
 	{
 		while (s[i++] && s[i] != c)
@@ -29,7 +28,17 @@ char	**ft_split(char const *s, char c)
 		while (s[i++] == c)
 			;
 	}
-	slices = malloc(slice_count * sizeof(char *));
+	slices = malloc((slice_count + 1) * sizeof(char *));
+	return (slices);
+}
+
+char	**ft_split(char const *s, char c)
+{
+	unsigned int	i;
+	unsigned int	j;
+	char			**slices;
+
+	slices = alloc_slices(s, c);
 	if (!slices)
 		return (NULL);
 	i = 0;
@@ -41,12 +50,13 @@ char	**ft_split(char const *s, char c)
 		slices[j] = malloc(i * sizeof(char));
 		if (!slices)
 			return (NULL);
-		ft_strlcpy(slices[j++], s, i - 1);
+		ft_strlcpy(slices[j++], s, i);
 		while (s[i++] == c)
 			;
 		while (--i)
 			s++;
 	}
+	slices[j] = NULL;
 	return (slices);
 }
 /*

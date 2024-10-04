@@ -6,7 +6,7 @@
 /*   By: estettle <stettler.etan@protonmail.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/01 14:32:05 by estettle          #+#    #+#             */
-/*   Updated: 2024/10/02 13:51:08 by estettle         ###   ########.fr       */
+/*   Updated: 2024/10/03 18:25:29 by estettle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -186,8 +186,17 @@ int	main(void)
 	printf("[Test 5] : %s\n", ft_strtrim("43126", "1234"));
 	printf("[Test 6] : %s\n", ft_strtrim("64312", "1234"));
 
-	// ft_split()
-	// ft_itoa()
+	printf("[!] Testing ft_split()...\n");
+	char	**result = ft_split("wow this works", ' ');
+	printf("[Test 1] : %s %s %s\n", result[0], result[1], result[2]);
+
+	printf("[!] Testing ft_itoa()...\n");
+	printf("[Test 1] : %s\n", ft_itoa(1234));
+	printf("[Test 2] : %s\n", ft_itoa(-1234));
+	printf("[Test 3] : %s\n", ft_itoa(0));
+	printf("[Test 4] : %s\n", ft_itoa(2147483647));
+	printf("[Test 5] : %s\n", ft_itoa(-2147483648));
+
 	// ft_strmapi()
 	// ft_striteri()
 	// ft_putchar_fd()
