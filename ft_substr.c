@@ -17,7 +17,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char				*substring;
 	size_t				s_length;
 	unsigned int		i;
-	
+
 	s_length = ft_strlen(s);
 	substring = malloc(s_length);
 	if (!substring)

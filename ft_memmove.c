@@ -11,14 +11,14 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+//#include <stdio.h>
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	size_t	i;
 	void	*original;
 
-	original = (void *)src;
-	// check if src and dst overlap and if src is BEFORE dst
+	original = ft_strdup(src);
 	if (src >= dst)
 		i = src - dst;
 	else
@@ -31,9 +31,12 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	}
 	else
 	{
-		i = 0;
-		while (i++ < len)
-			*(char *)dst++ = *(char *)src++;
+		i = -1;
+		while (++i < len)
+		{
+			*(char *)(dst + i) = *(char *)(src + i);
+			printf("%c\n", *(char *)(src + i));
+		}
 	}
 	return (original);
 }
@@ -41,15 +44,18 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 int	main(void)
 {
 	char	*melody = "Can. You. Hear. Me?";
-	char	roxy[100] = {0};
+	void	*roxy = ft_calloc(100, 1);
 
-	printf("%s\n", ft_memmove(roxy, melody, 19));
-	printf("%s\n%s\n", melody, roxy);
+	printf("%s\n", (char *)ft_memmove(roxy, melody, 19));
+	printf("%s\n", melody);
+	printf("%s\n", roxy);
 
-	printf("%s\n", ft_memmove(roxy+5, roxy, 19));
-	printf("%s\n%s\n", melody, roxy);
+	printf("%s\n", (char *)ft_memmove(roxy+5, melody, 19));
+	printf("%s\n", melody);
+	printf("%s\n", roxy);
 
-	printf("%s\n", ft_memmove(roxy+10, roxy, 19));
-	printf("%s\n%s\n", melody, roxy);
+	printf("%s\n", (char *)ft_memmove(roxy+10, melody, 19));
+	printf("%s\n", melody);
+	printf("%s\n", roxy);
 }
 */

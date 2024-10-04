@@ -20,11 +20,12 @@ char	*ft_strdup(const char *s1)
 	char	*copy;
 	int		i;
 
-	str_length = ft_strlen(s1) * sizeof(char);
+	str_length = (ft_strlen(s1) + 1) * sizeof(char);
 	copy = malloc(str_length);
 	i = 0;
 	while (str_length--)
 		copy[i++] = *(s1++);
+	copy[i] = '\0';
 	return (copy);
 }
 /*
