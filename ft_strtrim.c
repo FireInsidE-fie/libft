@@ -57,6 +57,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int		prefix_nb;
 	int		suffix_nb;
 
+	if (!(*s1) || !(*set))
+		return (NULL);
 	s1_length = ft_strlen(s1);
 	prefix_nb = get_prefix_nb(s1, set);
 	suffix_nb = get_suffix_nb(s1, set);

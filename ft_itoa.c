@@ -18,6 +18,8 @@ static int	ft_get_char_count(int n)
 	int	count;
 
 	count = 1;
+	if (n == -2147483648)
+		return (11);
 	if (n < 0)
 	{
 		count++;
@@ -39,7 +41,7 @@ char	*ft_itoa(int n)
 	int		is_negative;
 
 	char_count = ft_get_char_count(n);
-	str = malloc(char_count * sizeof(char));
+	str = malloc((char_count + 1) * sizeof(char));
 	if (!str)
 		return (NULL);
 	is_negative = 0;
@@ -48,7 +50,7 @@ char	*ft_itoa(int n)
 		str = "-2147483648";
 		return (str);
 	}
-	else if (n < 0)
+	if (n < 0)
 	{
 		str[0] = '-';
 		n = -n;

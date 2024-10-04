@@ -17,7 +17,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	size_t	i;
 	void	*original;
 
-	original = ft_strdup(src);
+	original = ft_strdup(src); //replace with strlcpy to stop using malloc
 	if (src >= dst)
 		i = src - dst;
 	else
