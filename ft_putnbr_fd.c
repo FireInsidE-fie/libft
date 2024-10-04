@@ -6,11 +6,13 @@
 /*   By: estettle <estettle@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/03 10:58:32 by estettle          #+#    #+#             */
-/*   Updated: 2024/10/03 10:58:42 by estettle         ###   ########.fr       */
+/*   Updated: 2024/10/04 10:45:47 by estettle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 void	ft_putnbr_fd(int n, int fd)
 {
-
+	ft_putstr_fd(ft_itoa(n), fd);
 }

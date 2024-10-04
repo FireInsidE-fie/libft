@@ -6,7 +6,7 @@
 /*   By: estettle <stettler.etan@protonmail.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/01 14:32:05 by estettle          #+#    #+#             */
-/*   Updated: 2024/10/03 18:25:29 by estettle         ###   ########.fr       */
+/*   Updated: 2024/10/04 10:47:12 by estettle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -202,7 +202,9 @@ int	main(void)
 	// ft_putchar_fd()
 	// ft_putstr_fd()
 	// ft_putendl_fd()
-	// ft_putnbr_fd()
+	
+	printf("[!] Testing ft_putnbr_fd()...\n");
+	ft_putnbr_fd(1234, 1);
 /*
 	printf("[!] - Starting tests for bonus part functions...\n");
 
