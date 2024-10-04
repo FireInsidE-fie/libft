@@ -6,23 +6,19 @@
 /*   By: estettle <estettle@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/03 10:43:42 by estettle          #+#    #+#             */
-/*   Updated: 2024/10/03 11:54:00 by estettle         ###   ########.fr       */
+/*   Updated: 2024/10/04 10:40:50 by estettle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strtrim(char const *s1, char const *set)
+static int	get_prefix_nb(char const *s1, char const *set)
 {
-	char	*trimmed;
-	int		s1_length;
-	int		i;
-	int		prefix_nb;
-	int		suffix_nb;
+	int	prefix_nb;
+	int	i;
 
-	s1_length = ft_strlen(s1);
 	prefix_nb = -1;
-	while (s1[++prefix_nb]) // create a get prefix nb function
+	while (s1[++prefix_nb])
 	{
 		i = -1;
 		while (set[++i])
@@ -31,8 +27,18 @@ char	*ft_strtrim(char const *s1, char const *set)
 		if (!set[i])
 			break ;
 	}
+	return (prefix_nb);
+}
+
+static int	get_suffix_nb(char const *s1, char const *set)
+{
+	int	i;
+	int	suffix_nb;
+	int	s1_length;
+
 	suffix_nb = -1;
-	while (s1[s1_length - ++suffix_nb - 1]) // create a get suffix nb function
+	s1_length = ft_strlen(s1);
+	while (s1[s1_length - ++suffix_nb - 1])
 	{
 		i = -1;
 		while (set[++i])
@@ -41,6 +47,19 @@ char	*ft_strtrim(char const *s1, char const *set)
 		if (!set[i])
 			break ;
 	}
+	return (suffix_nb);
+}
+
+char	*ft_strtrim(char const *s1, char const *set)
+{
+	char	*trimmed;
+	int		s1_length;
+	int		prefix_nb;
+	int		suffix_nb;
+
+	s1_length = ft_strlen(s1);
+	prefix_nb = get_prefix_nb(s1, set);
+	suffix_nb = get_suffix_nb(s1, set);
 	trimmed = malloc(s1_length - prefix_nb - suffix_nb);
 	if (!trimmed)
 		return (NULL);
