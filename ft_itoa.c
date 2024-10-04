@@ -40,13 +40,15 @@ char	*ft_itoa(int n)
 
 	char_count = ft_get_char_count(n);
 	str = malloc(char_count * sizeof(char));
+	if (!str)
+		return (NULL);
+	is_negative = 0;
 	if (n == -2147483648)
 	{
 		str = "-2147483648";
 		return (str);
 	}
-	is_negative = 0;
-	if (n < 0)
+	else if (n < 0)
 	{
 		str[0] = '-';
 		n = -n;
