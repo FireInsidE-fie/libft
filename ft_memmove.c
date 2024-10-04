@@ -33,10 +33,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	{
 		i = -1;
 		while (++i < len)
-		{
 			*(char *)(dst + i) = *(char *)(src + i);
-			printf("%c\n", *(char *)(src + i));
-		}
 	}
 	return (original);
 }

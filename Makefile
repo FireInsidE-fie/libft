@@ -54,6 +54,6 @@ fclean: clean
 	$(RM) $(RMFLAGS) $(NAME)
 re: fclean all
 
-debug: $(OBJS) _driver.c
+debug: $(OBJS) ._driver.c
 	$(CC) $(CFLAGS) -include $(INCL) -o $@ $^
 .PHONY: all clean fclean re

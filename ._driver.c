@@ -34,8 +34,10 @@ int	main(void)
 	printf("[Test 2] : %d\t-\t%d\n", atoi(melody), ft_atoi(melody));
 	melody = "";
 	printf("[Test 3] : %d\t-\t%d\n", atoi(melody), ft_atoi(melody));
-	melody = "";
+	melody = "2147483647";
 	printf("[Test 4] : %d\t-\t%d\n", atoi(melody), ft_atoi(melody));
+	melody = "-2147483648";
+	printf("[Test 5] : %d\t-\t%d\n", atoi(melody), ft_atoi(melody));
 
 	printf("[!] Testing ft_bzero()...\n");
 	bzero(roxy, 3);
