@@ -26,7 +26,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	}
 	return (original);
 }
-
+/*
 #include <stdio.h>
 
 int	main(void)
@@ -40,3 +40,4 @@ int	main(void)
 	printf("%s\n", ft_memcpy(roxy+5, melody, 20));
 	printf("%s\n%s\n", melody, roxy);
 }
+*/

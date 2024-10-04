@@ -56,6 +56,7 @@ char	*ft_itoa(int n)
 		n = -n;
 		is_negative = 1;
 	}
+	str[char_count] = '\0';
 	while (char_count-- > (0 + is_negative))
 	{
 		str[char_count] = (n % 10) + '0';
