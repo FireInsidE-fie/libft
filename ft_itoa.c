@@ -44,11 +44,12 @@ char	*ft_itoa(int n)
 	str = malloc((char_count + 1) * sizeof(char));
 	if (!str)
 		return (NULL);
+	str[char_count] = '\0';
 	is_negative = 0;
 	if (n == -2147483648)
 	{
-		str = "-2147483648";
-		return (str);
+		str[--char_count] = '8';
+		n /= 10;
 	}
 	if (n < 0)
 	{
@@ -56,7 +57,6 @@ char	*ft_itoa(int n)
 		n = -n;
 		is_negative = 1;
 	}
-	str[char_count] = '\0';
 	while (char_count-- > (0 + is_negative))
 	{
 		str[char_count] = (n % 10) + '0';
