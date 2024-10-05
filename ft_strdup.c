@@ -25,7 +25,7 @@ char	*ft_strdup(const char *s1)
 	if (!copy)
 		return (NULL);
 	i = 0;
-	while (str_length--)
+	while (--str_length)
 		copy[i++] = *(s1++);
 	copy[i] = '\0';
 	return (copy);
