@@ -31,17 +31,21 @@ static char	**alloc_slices(char const *s, char c)
 	int		slice_count;
 	char	**slices;
 
-	slice_count = 1;
+	slice_count = 0;
 	i = 0;
 	while (s[i])
 	{
-		if (s[i] != c)
-			i++;
-		else
+		if (s[i] == c || s[i] == '\0')
 		{
 			slice_count++;
 			while (s[i] == c)
 				i++;
+		}
+		else
+		{
+			if (slice_count == 0)
+				slice_count++;
+			i++;
 		}
 	}
 	slices = malloc((slice_count + 1) * sizeof(char *));
