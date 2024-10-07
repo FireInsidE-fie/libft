@@ -22,8 +22,13 @@ static int	get_prefix_nb(char const *s1, char const *set)
 	{
 		i = -1;
 		while (set[++i])
+		{
 			if (s1[prefix_nb] == set[i])
+			{
+				i = 0;
 				break ;
+			}
+		}
 		if (!set[i])
 			break ;
 	}
@@ -38,12 +43,19 @@ static int	get_suffix_nb(char const *s1, char const *set)
 
 	suffix_nb = -1;
 	s1_length = ft_strlen(s1);
+	if (!s1_length)
+		return (0);
 	while (s1[s1_length - ++suffix_nb - 1])
 	{
 		i = -1;
 		while (set[++i])
+		{
 			if (s1[s1_length - suffix_nb - 1] == set[i])
+			{
+				i = 0;
 				break ;
+			}
+		}
 		if (!set[i])
 			break ;
 	}
@@ -56,16 +68,26 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int		s1_length;
 	int		prefix_nb;
 	int		suffix_nb;
+	int		i;
 
-	if (!(*s1) || !(*set))
-		return (NULL);
 	s1_length = ft_strlen(s1);
 	prefix_nb = get_prefix_nb(s1, set);
 	suffix_nb = get_suffix_nb(s1, set);
-	trimmed = malloc(s1_length - prefix_nb - suffix_nb);
+	if (s1_length - prefix_nb <= 0 && s1_length - suffix_nb <= 0)
+	{
+		trimmed = malloc(1);
+		if (!trimmed)
+			return (NULL);
+		trimmed[0] = '\0';
+		return (trimmed);
+	}
+	trimmed = malloc((s1_length - prefix_nb - suffix_nb + 1) * sizeof(char));
 	if (!trimmed)
 		return (NULL);
-	ft_strlcpy(trimmed, s1 + prefix_nb, s1_length - prefix_nb - suffix_nb);
+	i = -1;
+	while (++i < s1_length - prefix_nb - suffix_nb && s1[i])
+		trimmed[i] = s1[i + prefix_nb];
+	trimmed[i] = '\0';
 	return (trimmed);
 }
 /*
@@ -73,6 +95,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 int	main(void)
 {
-	printf("[Test 4] : %s\n", ft_strtrim("4312", "1234"));
+	printf("[Test 4] : %s\n", ft_strtrim("            ", " "));
 }
 */
