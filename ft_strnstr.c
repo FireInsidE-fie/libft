@@ -17,23 +17,27 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	size_t	i;
 	size_t	j;
 
-	if (!needle)
+	if (!*needle)
 		return ((char *)haystack);
 	i = 0;
 	j = 0;
-	while (i < len)
+	while (i < len && *haystack)
 	{
 		j = 0;
-		while (j < (len - i) && haystack[j] == needle[j])
-		{
-			if (!needle[j])
-				return ((char *)haystack);
+		while (j + i < len && haystack[j] && haystack[j] == needle[j])
 			j++;
-			if (haystack[j] != needle[j])
-				break ;
-		}
+		if (!needle[j])
+			return ((char *)haystack);
 		haystack++;
 		i++;
 	}
 	return (NULL);
 }
+/*
+#include <stdio.h>
+
+int	main(void)
+{
+	printf("%s\n", ft_strnstr("Can. You. Hear. Me?", "", 30));
+}
+*/
