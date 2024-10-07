@@ -6,23 +6,23 @@
 /*   By: estettle <stettle.etan@protonmail.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/01 09:30:42 by estettle          #+#    #+#             */
-/*   Updated: 2024/10/07 18:11:26 by estettle         ###   ########.fr       */
+/*   Updated: 2024/10/07 18:38:10 by estettle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
+// libraries
+# include <stdlib.h> // this is for malloc() and free()
+# include <unistd.h> // this is for write()
+
 // typedefs
-typedef struct	s_list
+typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
 }	t_list;
-
-// libraries
-# include <stdlib.h> // this is for malloc() and free()
-# include <unistd.h> // this is for write()
 
 // functions
 int		ft_atoi(const char *str);
@@ -64,5 +64,6 @@ int		ft_toupper(int c);
 t_list	*ft_lstnew(void *content);
 void	ft_lstadd_front(t_list **lst, t_list *new);
 int		ft_lstsize(t_list *lst);
+t_list	*ft_lstlast(t_list *lst);
 
 #endif
