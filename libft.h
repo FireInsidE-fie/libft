@@ -6,7 +6,7 @@
 /*   By: estettle <stettle.etan@protonmail.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/01 09:30:42 by estettle          #+#    #+#             */
-/*   Updated: 2024/10/07 17:08:11 by estettle         ###   ########.fr       */
+/*   Updated: 2024/10/07 17:24:47 by estettle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,5 +62,6 @@ int		ft_toupper(int c);
 
 // bonus functions
 t_list	*ft_lstnew(void *content);
+void	ft_lstadd_front(t_list **lst, t_list *new);
 
 #endif
