@@ -13,6 +13,13 @@
 #ifndef LIBFT_H
 # define LIBFT_H
 
+// typedefs
+typedef struct	s_list
+{
+	void			*content;
+	struct s_list	*next;
+}	t_list;
+
 // libraries
 # include <stdlib.h> // this is for malloc() and free()
 # include <unistd.h> // this is for write()
