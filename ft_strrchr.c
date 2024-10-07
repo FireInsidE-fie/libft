@@ -16,20 +16,25 @@ char	*ft_strrchr(const char *s, int c)
 {
 	int	str_length;
 
-	str_length = 0;
-	while (*s)
-	{
-		str_length++;
-		s++;
-	}
-	if (*s == c)
+	str_length = ft_strlen(s);
+	s += str_length;
+	if (c == '\0')
 		return ((char *)s);
-	while (str_length >= 0)
+	while (str_length-- >= 0)
 	{
-		s--;
-		str_length--;
 		if (*s == c)
 			return ((char *)s);
+		s--;
 	}
 	return (NULL);
 }
+/*
+#include <stdio.h>
+
+int	main(void)
+{
+	char	*melody = "Can. You. Hear. Me?";
+
+	printf("%s\n", ft_strrchr(melody, '!'));
+}
+*/
