@@ -6,7 +6,7 @@
 /*   By: estettle <stettle.etan@protonmail.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/01 09:30:42 by estettle          #+#    #+#             */
-/*   Updated: 2024/10/04 10:46:18 by estettle         ###   ########.fr       */
+/*   Updated: 2024/10/07 17:08:11 by estettle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,5 +59,8 @@ char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
+
+// bonus functions
+t_list	*ft_lstnew(void *content);
 
 #endif

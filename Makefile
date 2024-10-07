@@ -39,7 +39,7 @@ SRCS=ft_atoi.c \
 	 ft_substr.c \
 	 ft_tolower.c \
 	 ft_toupper.c
-BONUS_SRCS=
+BONUS_SRCS=ft_lstnew.c
 OBJS=$(SRCS:.c=.o)
 BONUS_OBJS=$(BONUS_SRCS:.c=.o)
 INCL=libft.h
@@ -51,9 +51,9 @@ $(NAME): $(OBJS)
 %.o: %.c
 	$(CC) $(CFLAGS) -include $(INCL) -c $< -o $@ 
 bonus: $(OBJS) $(BONUS_OBJS)
-	$(AR) $(ARFLAGS) $@ $^
+	$(AR) $(ARFLAGS) $(NAME) $^
 clean:
-	$(RM) $(RMFLAGS) $(OBJS)
+	$(RM) $(RMFLAGS) $(OBJS) $(BONUS_OBJS)
 fclean: clean
 	$(RM) $(RMFLAGS) $(NAME)
 re: fclean all
