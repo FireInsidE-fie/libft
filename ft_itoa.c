@@ -6,7 +6,7 @@
 /*   By: estettle <estettle@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/03 10:55:44 by estettle          #+#    #+#             */
-/*   Updated: 2024/10/03 10:55:51 by estettle         ###   ########.fr       */
+/*   Updated: 2024/10/08 16:25:25 by estettle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,17 +40,14 @@ char	*ft_itoa(int n)
 	char	*str;
 	int		is_negative;
 
+	if (n == -2147483648)
+		return (ft_strdup("-2147483648"));
 	char_count = ft_get_char_count(n);
 	str = malloc((char_count + 1) * sizeof(char));
 	if (!str)
 		return (NULL);
 	str[char_count] = '\0';
 	is_negative = 0;
-	if (n == -2147483648)
-	{
-		str[--char_count] = '8';
-		n /= 10;
-	}
 	if (n < 0)
 	{
 		str[0] = '-';
