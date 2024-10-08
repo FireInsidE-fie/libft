@@ -20,37 +20,30 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	if (!dst && !src)
 		return (dst);
 	if (dst <= src)
-		i = dst - src;
-	else
 		i = src - dst;
+	else
+		i = dst - src;
 	if (i > len || src > dst)
 		ft_memcpy(dst, src, len);
 	else
 	{
 		i = len;
-		while (--i)
+		while (i--)
 			*(char *)(dst + i) = *(char *)(src + i);
 	}
 	return (dst);
 }
 /*
-//#include <stdio.h>
+#include <stdio.h>
+#include <unistd.h>
 
 int	main(void)
 {
-	char	*melody = "Can. You. Hear. Me?";
-	void	*roxy = ft_calloc(100, 1);
-
-	printf("%s\n", (char *)ft_memmove(roxy, melody, 19));
-	printf("%s\n", melody);
-	printf("%s\n", roxy);
-
-	printf("%s\n", (char *)ft_memmove(roxy+5, melody, 19));
-	printf("%s\n", melody);
-	printf("%s\n", roxy);
-
-	printf("%s\n", (char *)ft_memmove(roxy+10, melody, 19));
-	printf("%s\n", melody);
-	printf("%s\n", roxy);
+	void	*melody;
+	void	*roxy = ft_strdup("123456");
+	
+	melody = roxy + 2;
+	ft_memmove(melody, roxy, 4);
+	write(1, (char *)melody, 4);
 }
 */
