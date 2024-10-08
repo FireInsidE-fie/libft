@@ -6,7 +6,7 @@
 /*   By: estettle <estettle@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/26 10:56:03 by estettle          #+#    #+#             */
-/*   Updated: 2024/09/27 21:45:29 by estettle         ###   ########.fr       */
+/*   Updated: 2024/10/08 17:57:43 by estettle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,14 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	int	str_length;
+	int	i;
 
-	str_length = ft_strlen(s);
-	s += str_length;
-	if ((char)c == '\0')
-		return ((char *)s);
-	while (str_length-- >= 0)
+	i = ft_strlen(s);
+	while (i >= 0)
 	{
-		if (*s == (char)c)
-			return ((char *)s);
-		s--;
+		if (*(s + i) == (char)c)
+			return ((char *)(s + i));
+		i--;
 	}
 	return (NULL);
 }
