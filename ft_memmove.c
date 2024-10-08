@@ -6,7 +6,7 @@
 /*   By: estettle <stettle.etan@protonmail.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/01 10:13:55 by estettle          #+#    #+#             */
-/*   Updated: 2024/10/01 11:38:33 by estettle         ###   ########.fr       */
+/*   Updated: 2024/10/08 12:56:51 by estettle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,29 +15,23 @@
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	size_t	i;
-	void	*original;
 
-	original = dst;
-	if (src >= dst)
-		i = src - dst;
-	else
-		i = dst - src;
+	i = 0;
 	if (!dst && !src)
-		return (original);
-	if (i <= len)
+		return (dst);
+	if (dst <= src)
+		i = dst - src;
+	else
+		i = src - dst;
+	if (i > len || src > dst)
+		ft_memcpy(dst, src, len);
+	else
 	{
 		i = len;
-		while (i-- > 0)
+		while (--i)
 			*(char *)(dst + i) = *(char *)(src + i);
 	}
-	else
-	{
-		i = 0;
-		*(char *)(dst + i) = *(char *)(src + i);
-		while (i++ < len)
-			*(char *)(dst + i) = *(char *)(src + i);
-	}
-	return (original);
+	return (dst);
 }
 /*
 //#include <stdio.h>
