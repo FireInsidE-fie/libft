@@ -18,11 +18,11 @@ char	*ft_strrchr(const char *s, int c)
 
 	str_length = ft_strlen(s);
 	s += str_length;
-	if (c == '\0')
+	if ((char)c == '\0')
 		return ((char *)s);
 	while (str_length-- >= 0)
 	{
-		if (*s == c)
+		if (*s == (char)c)
 			return ((char *)s);
 		s--;
 	}
@@ -35,6 +35,6 @@ int	main(void)
 {
 	char	*melody = "Can. You. Hear. Me?";
 
-	printf("%s\n", ft_strrchr(melody, '!'));
+	printf("%s\n", ft_strrchr(melody, '\0'));
 }
 */
