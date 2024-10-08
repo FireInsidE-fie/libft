@@ -84,6 +84,6 @@ char	**ft_split(char const *s, char c)
 
 int	main(void)
 {
-	printf("%s\n", *ft_split("Can. You. Hear. Me?", ' '));
+	printf("%s\n", *ft_split("\0aa\0bbb", '\0'));
 }
 */
