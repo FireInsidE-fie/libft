@@ -17,21 +17,20 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char	*substring;
 	size_t	i;
 
-	if (ft_strlen(s) >= len)
-		substring = ft_calloc(len + 1, sizeof(char));
+	if (start >= ft_strlen(s) + 1)
+		return (ft_calloc(1, sizeof(char)));
+	if (ft_strlen(s) - start < len)
+		substring = ft_calloc(ft_strlen(s) - start + 1, sizeof(char));
 	else
-		substring = ft_calloc(ft_strlen(s) + 1, sizeof(char));
+		substring = ft_calloc(len + 1, sizeof(char));
 	if (!substring)
 		return (NULL);
 	i = 0;
-	if (start < ft_strlen(s))
+	s += start;
+	while (i < len && s[i])
 	{
-		s += start;
-		while (i < len && s[i])
-		{
-			substring[i] = s[i];
-			i++;
-		}
+		substring[i] = s[i];
+		i++;
 	}
 	substring[i] = '\0';
 	return (substring);
