@@ -74,15 +74,13 @@ char	**ft_split(char const *s, char c)
 	slices[j] = NULL;
 	return (slices);
 }
-/*
+
 #include <stdio.h>
 
 int	main(void)
 {
 	char	*invalidReadCheck = 0;
 	char	**slices = ft_split(invalidReadCheck, 0);
-	if (!slices)
-		return (0);
+	
 	printf("%s\n", slices[0]);
 }
-*/
