@@ -6,7 +6,7 @@
 /*   By: estettle <estettle@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/03 10:55:14 by estettle          #+#    #+#             */
-/*   Updated: 2024/10/04 09:16:52 by estettle         ###   ########.fr       */
+/*   Updated: 2024/10/08 17:08:55 by estettle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@ static char	*ft_strndup(const char *s1, size_t n)
 {
 	char	*copy;
 
-	copy = 0;
 	copy = malloc((n + 1) * sizeof(char));
 	if (!copy)
 		return (NULL);
@@ -33,19 +32,15 @@ static char	**alloc_slices(char const *s, char c)
 
 	slice_count = 0;
 	i = 0;
-	while (s[i])
+	while (s && s[i])
 	{
-		if (s[i] == c || s[i] == '\0')
-		{
-			slice_count++;
-			while (s[i] == c)
-				i++;
-		}
+		if (s[i] == c)
+			i++;
 		else
 		{
-			if (slice_count == 0)
-				slice_count++;
-			i++;
+			slice_count++;
+			while (s[i] && s[i] != c)
+				i++;
 		}
 	}
 	slices = malloc((slice_count + 1) * sizeof(char *));
@@ -63,9 +58,9 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	i = 0;
 	j = 0;
-	while (s[i] == c)
+	while (s && s[i] == c)
 		i++;
-	while (s[i])
+	while (s && s[i])
 	{
 		while (s[i] == c)
 			i++;
@@ -84,6 +79,10 @@ char	**ft_split(char const *s, char c)
 
 int	main(void)
 {
-	printf("%s\n", *ft_split("\0aa\0bbb", '\0'));
+	char	*invalidReadCheck = 0;
+	char	**slices = ft_split(invalidReadCheck, 0);
+	if (!slices)
+		return (0);
+	printf("%s\n", slices[0]);
 }
 */
