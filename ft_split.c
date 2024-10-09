@@ -74,7 +74,7 @@ char	**ft_split(char const *s, char c)
 	slices[j] = NULL;
 	return (slices);
 }
-
+/*
 #include <stdio.h>
 
 int	main(void)
@@ -84,3 +84,4 @@ int	main(void)
 	
 	printf("%s\n", slices[0]);
 }
+*/
