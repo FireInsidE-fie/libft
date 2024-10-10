@@ -12,15 +12,26 @@
 
 #include "libft.h"
 
+static int	clear_slices(char **slices)
+{
+	int	i;
+
+	i = 0;
+	while (slices[i])
+		free(slices[i++]);
+	free(slices);
+	return (0);
+}
+
 static char	*ft_strndup(const char *s1, size_t n)
 {
 	char	*copy;
 
-	copy = malloc((n + 1) * sizeof(char));
+	copy = malloc((n) * sizeof(char));
 	if (!copy)
 		return (NULL);
 	ft_strlcpy(copy, s1, n);
-	copy[n] = '\0';
+	copy[n - 1] = '\0';
 	return (copy);
 }
 
@@ -32,6 +43,8 @@ static char	**alloc_slices(char const *s, char c)
 
 	slice_count = 0;
 	i = 0;
+	while (s[i] == c)
+		i++;
 	while (s && s[i])
 	{
 		if (s[i] == c)
@@ -58,7 +71,7 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	i = 0;
 	j = 0;
-	while (s && s[i] == c)
+	while (s[i] == c)
 		i++;
 	while (s && s[i])
 	{
@@ -69,7 +82,11 @@ char	**ft_split(char const *s, char c)
 		while (s[i] && s[i] != c)
 			i++;
 		if (i > 0)
-			slices[j++] = ft_strndup(s, i + 1);
+		{
+			*(slices + j) = ft_strndup(s, i + 1);
+			if (!*(slices + j++) && !clear_slices(slices))
+				return (NULL);
+		}
 	}
 	slices[j] = NULL;
 	return (slices);
@@ -79,8 +96,7 @@ char	**ft_split(char const *s, char c)
 
 int	main(void)
 {
-	char	*invalidReadCheck = 0;
-	char	**slices = ft_split(invalidReadCheck, 0);
+	char	**slices = ft_split("hello!", ' ');
 	
 	printf("%s\n", slices[0]);
 }
