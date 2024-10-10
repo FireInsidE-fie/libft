@@ -6,7 +6,7 @@
 /*   By: estettle <estettle@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 10:17:36 by estettle          #+#    #+#             */
-/*   Updated: 2024/10/08 10:17:36 by estettle         ###   ########.fr       */
+/*   Updated: 2024/10/10 20:52:30 by estettle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,15 +16,19 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*new_lst;	
 	t_list	*new_item;
+	void	*content;
 
 	if (!lst || !f || !del)
 		return (NULL);
 	new_lst = NULL;
 	while (lst)
 	{
-		new_item = ft_lstnew(f(lst->content));
+		content = f(lst->content);
+		new_item = ft_lstnew(content);
 		if (!new_item)
 		{
+			del(content);
+			free(new_item);
 			ft_lstclear(&new_lst, del);
 			return (NULL);
 		}
