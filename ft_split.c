@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: estettle <estettle@student.42lausanne.ch>  +#+  +:+       +#+        */
+/*   By: estettle <estettle@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/03 10:55:14 by estettle          #+#    #+#             */
-/*   Updated: 2024/10/08 17:08:55 by estettle         ###   ########.fr       */
+/*   Updated: 2024/10/10 12:32:47 by estettle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,12 @@ static char	**alloc_slices(char const *s, char c)
 
 	slice_count = 0;
 	i = 0;
+	if (!*s)
+	{
+		slices = malloc(sizeof(char *));
+		*slices = NULL;
+		return (slices);
+	}
 	while (s[i] == c)
 		i++;
 	while (s && s[i])
@@ -67,6 +73,8 @@ char	**ft_split(char const *s, char c)
 	char			**slices;
 
 	slices = alloc_slices(s, c);
+	if (!*s)
+		return (slices);
 	if (!slices)
 		return (NULL);
 	i = 0;
@@ -96,8 +104,10 @@ char	**ft_split(char const *s, char c)
 
 int	main(void)
 {
-	char	**slices = ft_split("hello!", ' ');
-	
+	char	*invalidReadCheck;
+	invalidReadCheck = malloc(sizeof(char));
+	*invalidReadCheck = 0;
+	char	**slices = ft_split(invalidReadCheck, 0);
 	printf("%s\n", slices[0]);
 }
 */
