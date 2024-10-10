@@ -6,7 +6,7 @@
 /*   By: estettle <estettle@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/03 10:55:14 by estettle          #+#    #+#             */
-/*   Updated: 2024/10/10 12:32:47 by estettle         ###   ########.fr       */
+/*   Updated: 2024/10/10 17:32:13 by estettle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,9 +43,11 @@ static char	**alloc_slices(char const *s, char c)
 
 	slice_count = 0;
 	i = 0;
-	if (!*s)
+	if (!(*s))
 	{
 		slices = malloc(sizeof(char *));
+		if (!slices)
+			return (NULL);
 		*slices = NULL;
 		return (slices);
 	}
@@ -55,28 +57,18 @@ static char	**alloc_slices(char const *s, char c)
 	{
 		if (s[i] == c)
 			i++;
-		else
-		{
-			slice_count++;
+		else if (++slice_count)
 			while (s[i] && s[i] != c)
 				i++;
-		}
 	}
-	slices = malloc((slice_count + 1) * sizeof(char *));
-	return (slices);
+	return (malloc((slice_count + 1) * sizeof(char *)));
 }
 
-char	**ft_split(char const *s, char c)
+int	slice(char **slices, char const *s, char c)
 {
-	unsigned int	i;
-	unsigned int	j;
-	char			**slices;
+	int	i;
+	int	j;
 
-	slices = alloc_slices(s, c);
-	if (!*s)
-		return (slices);
-	if (!slices)
-		return (NULL);
 	i = 0;
 	j = 0;
 	while (s[i] == c)
@@ -93,10 +85,24 @@ char	**ft_split(char const *s, char c)
 		{
 			*(slices + j) = ft_strndup(s, i + 1);
 			if (!*(slices + j++) && !clear_slices(slices))
-				return (NULL);
+				return (-1);
 		}
 	}
 	slices[j] = NULL;
+	return (0);
+}
+
+char	**ft_split(char const *s, char c)
+{
+	char	**slices;
+
+	slices = alloc_slices(s, c);
+	if (!slices)
+		return (NULL);
+	if (!*s)
+		return (slices);
+	if (slice(slices, s, c) == -1)
+		return (NULL);
 	return (slices);
 }
 /*
@@ -104,10 +110,9 @@ char	**ft_split(char const *s, char c)
 
 int	main(void)
 {
-	char	*invalidReadCheck;
-	invalidReadCheck = malloc(sizeof(char));
-	*invalidReadCheck = 0;
-	char	**slices = ft_split(invalidReadCheck, 0);
+	//char	*invalidReadCheck;
+	//invalidReadCheck = malloc(sizeof(char));
+	char	**slices = ft_split("", 'a');
 	printf("%s\n", slices[0]);
 }
 */
