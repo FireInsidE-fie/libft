@@ -3,14 +3,12 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: estettle <estettle@student.42lausanne.ch>  +#+  +:+       +#+        */
+/*   By: estettle <estettle@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/26 10:55:57 by estettle          #+#    #+#             */
-/*   Updated: 2024/09/26 10:55:58 by estettle         ###   ########.fr       */
+/*   Updated: 2024/10/10 21:20:41 by estettle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 char	*ft_strchr(const char *s, int c)
 {
@@ -22,5 +20,5 @@ char	*ft_strchr(const char *s, int c)
 	}
 	if (*s == (char)c)
 		return ((char *)s);
-	return (NULL);
+	return (0);
 }

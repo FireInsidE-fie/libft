@@ -6,11 +6,9 @@
 /*   By: estettle <estettle@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/27 21:46:02 by estettle          #+#    #+#             */
-/*   Updated: 2024/10/04 20:43:20 by estettle         ###   ########.fr       */
+/*   Updated: 2024/10/10 21:18:53 by estettle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_atoi(const char *str)
 {

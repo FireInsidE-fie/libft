@@ -3,16 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: estettle <estettle@student.42lausanne.ch>  +#+  +:+       +#+        */
+/*   By: estettle <estettle@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/01 23:03:11 by estettle          #+#    #+#             */
-/*   Updated: 2024/10/02 12:44:45 by estettle         ###   ########.fr       */
+/*   Updated: 2024/10/10 21:21:00 by estettle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-//size_t  ft_strlen(const char *s);
 
 char	*ft_strdup(const char *s1)
 {

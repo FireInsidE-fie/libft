@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: estettle <estettle@student.42lausanne.ch>  +#+  +:+       +#+        */
+/*   By: estettle <estettle@student.42lausanne.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 17:20:30 by estettle          #+#    #+#             */
-/*   Updated: 2024/10/07 18:03:18 by estettle         ###   ########.fr       */
+/*   Updated: 2024/10/10 21:19:25 by estettle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
