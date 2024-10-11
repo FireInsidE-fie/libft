@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: estettle <estettle@student.42lausanne.c    +#+  +:+       +#+        */
+/*   By: estettle <estettle@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/08 10:17:36 by estettle          #+#    #+#             */
-/*   Updated: 2024/10/10 20:52:30 by estettle         ###   ########.fr       */
+/*   Created: 2024/10/11 11:47:13 by estettle          #+#    #+#             */
+/*   Updated: 2024/10/11 11:47:14 by estettle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

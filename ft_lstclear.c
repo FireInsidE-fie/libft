@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: estettle <estettle@student.42lausanne.c    +#+  +:+       +#+        */
+/*   By: estettle <estettle@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/07 22:34:48 by estettle          #+#    #+#             */
-/*   Updated: 2024/10/10 20:38:12 by estettle         ###   ########.fr       */
+/*   Created: 2024/10/11 11:47:05 by estettle          #+#    #+#             */
+/*   Updated: 2024/10/11 11:47:05 by estettle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: estettle <stettle.etan@protonmail.com>     +#+  +:+       +#+        */
+/*   By: estettle <estettle@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/01 10:13:55 by estettle          #+#    #+#             */
-/*   Updated: 2024/10/08 12:56:51 by estettle         ###   ########.fr       */
+/*   Created: 2024/10/11 11:47:39 by estettle          #+#    #+#             */
+/*   Updated: 2024/10/11 11:47:40 by estettle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

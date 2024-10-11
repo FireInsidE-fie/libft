@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: estettle <stettler.etan@protonmail.com>    +#+  +:+       +#+        */
+/*   By: estettle <estettle@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/01 13:44:42 by estettle          #+#    #+#             */
-/*   Updated: 2024/10/01 15:04:13 by estettle         ###   ########.fr       */
+/*   Created: 2024/10/11 11:46:30 by estettle          #+#    #+#             */
+/*   Updated: 2024/10/11 11:46:32 by estettle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

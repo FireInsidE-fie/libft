@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: estettle <estettle@student.42lausanne.c    +#+  +:+       +#+        */
+/*   By: estettle <estettle@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/03 10:55:14 by estettle          #+#    #+#             */
-/*   Updated: 2024/10/10 17:32:13 by estettle         ###   ########.fr       */
+/*   Created: 2024/10/11 11:47:48 by estettle          #+#    #+#             */
+/*   Updated: 2024/10/11 11:47:49 by estettle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

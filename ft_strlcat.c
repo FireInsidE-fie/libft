@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: estettle <estettle@student.42lausanne.c    +#+  +:+       +#+        */
+/*   By: estettle <estettle@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/01 13:09:24 by estettle          #+#    #+#             */
-/*   Updated: 2024/10/10 21:21:21 by estettle         ###   ########.fr       */
+/*   Created: 2024/10/11 11:48:06 by estettle          #+#    #+#             */
+/*   Updated: 2024/10/11 11:48:07 by estettle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
