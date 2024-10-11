@@ -12,6 +12,10 @@
 
 #include "libft.h"
 
+/* ft_lstnew()
+ * this function allocates a new lst item and returns it, adding the content
+ * parameter to it
+*/
 t_list	*ft_lstnew(void *content)
 {
 	t_list	*new_lst;

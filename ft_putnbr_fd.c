@@ -12,6 +12,9 @@
 
 #include "libft.h"
 
+/* ft_putnbr_fd()
+ * writes the number n to the file descriptor fd.
+*/
 void	ft_putnbr_fd(int n, int fd)
 {
 	if (n == -2147483648)

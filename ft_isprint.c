@@ -10,6 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/* ft_isprint()
+ * checks if a character is printable or not
+ * returns 1 if yes, 0 if not
+*/
 int	ft_isprint(int c)
 {
 	if (c >= '\040' && c <= '\176')

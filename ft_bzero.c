@@ -12,6 +12,9 @@
 
 #include "libft.h" 
 
+/* ft_bzero()
+ * takes a memory area and sets n bytes inside of it to 0
+*/
 void	ft_bzero(void *s, size_t n)
 {
 	if (n == 0)

@@ -12,6 +12,10 @@
 
 #include "libft.h"
 
+/* ft_memset()
+ * sets len bytes from the memory pointed to by *b as character c.
+ * returns a pointer to b.
+*/
 void	*ft_memset(void *b, int c, size_t len)
 {
 	size_t	i;

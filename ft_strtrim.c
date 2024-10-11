@@ -12,6 +12,10 @@
 
 #include "libft.h"
 
+/* get_prefix_nb()
+ * counts the number of characters that are in the set from the beginning of the
+ * s1 string, and returns it
+*/
 static int	get_prefix_nb(char const *s1, char const *set)
 {
 	int	prefix_nb;
@@ -35,6 +39,10 @@ static int	get_prefix_nb(char const *s1, char const *set)
 	return (prefix_nb);
 }
 
+/* get_suffix_nb()
+ * counts the number of characters that are in the set starting from the end of
+ * the s1 string, and returns it
+*/
 static int	get_suffix_nb(char const *s1, char const *set)
 {
 	int	i;
@@ -62,20 +70,23 @@ static int	get_suffix_nb(char const *s1, char const *set)
 	return (suffix_nb);
 }
 
+/* ft_strtrim()
+ * removes any character from the set from both tips of string s1
+ * returns the modified string
+*/
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*trimmed;
 	int		s1_length;
 	int		prefix_nb;
 	int		suffix_nb;
-	int		i;
 
 	s1_length = ft_strlen(s1);
 	prefix_nb = get_prefix_nb(s1, set);
 	suffix_nb = get_suffix_nb(s1, set);
 	if (s1_length - prefix_nb <= 0 && s1_length - suffix_nb <= 0)
 	{
-		trimmed = malloc(1);
+		trimmed = malloc(sizeof(char));
 		if (!trimmed)
 			return (NULL);
 		trimmed[0] = '\0';
@@ -84,10 +95,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	trimmed = malloc((s1_length - prefix_nb - suffix_nb + 1) * sizeof(char));
 	if (!trimmed)
 		return (NULL);
-	i = -1;
-	while (++i < s1_length - prefix_nb - suffix_nb && s1[i])
-		trimmed[i] = s1[i + prefix_nb];
-	trimmed[i] = '\0';
+	ft_strlcpy(trimmed, s1 + prefix_nb, s1_length - prefix_nb - suffix_nb + 1);
+	trimmed[ft_strlen(trimmed)] = '\0';
 	return (trimmed);
 }
 /*

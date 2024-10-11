@@ -12,6 +12,11 @@
 
 #include "libft.h"
 
+/* ft_strrchr()
+ * locates the last occurence of the character c inside the string s and returns
+ * a pointer to it
+ * if the character isn't found, return NULL
+*/
 char	*ft_strrchr(const char *s, int c)
 {
 	int	i;

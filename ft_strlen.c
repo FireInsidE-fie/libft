@@ -12,6 +12,9 @@
 
 #include "libft.h"
 
+/* ft_strlen()
+ * returns the size of string *s, trailing null character excluded.
+*/
 size_t	ft_strlen(const char *s)
 {
 	size_t	count;

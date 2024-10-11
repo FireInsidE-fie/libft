@@ -12,6 +12,9 @@
 
 #include "libft.h"
 
+/* ft_lstadd_back()
+ * adds an item to the back of a list
+*/
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*last;

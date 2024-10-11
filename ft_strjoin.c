@@ -12,6 +12,10 @@
 
 #include "libft.h"
 
+/* ft_strjoin()
+ * fuses the strings *s1 and *s2 together, null terminating the resulting string
+ * and returning it.
+*/
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*joined;

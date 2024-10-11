@@ -12,6 +12,11 @@
 
 #include "libft.h" 
 
+/* ft_memchr()
+ * this function looks for the character c inside of the memory area *s.
+ * if it finds it within n bytes, it returns a pointer to the character
+ * if not, it returns NULL.
+*/
 void	*ft_memchr(const void *s, int c, size_t n)
 {
 	size_t	i;

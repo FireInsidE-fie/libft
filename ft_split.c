@@ -12,6 +12,10 @@
 
 #include "libft.h"
 
+/* clear_slices()
+ * in case of an allocation error in the slice() function, this one will free
+ * all slices contained inside of the **slices array of strings.
+*/
 static int	clear_slices(char **slices)
 {
 	int	i;
@@ -23,6 +27,9 @@ static int	clear_slices(char **slices)
 	return (0);
 }
 
+/* ft_strndup()
+ * allocates and copies *s1 for n characters, then returns a pointer to the copy
+*/
 static char	*ft_strndup(const char *s1, size_t n)
 {
 	char	*copy;
@@ -35,6 +42,10 @@ static char	*ft_strndup(const char *s1, size_t n)
 	return (copy);
 }
 
+/* alloc_slices()
+ * allocates slices according to the number of substrings that *s would make
+ * if divided by the c character.
+*/
 static char	**alloc_slices(char const *s, char c)
 {
 	int		i;
@@ -64,7 +75,11 @@ static char	**alloc_slices(char const *s, char c)
 	return (malloc((slice_count + 1) * sizeof(char *)));
 }
 
-int	slice(char **slices, char const *s, char c)
+/* slice()
+ * takes an array of strings (**slices) and cuts the string *s between c
+ * characters, then puts each slice into **slices.
+*/
+static int	slice(char **slices, char const *s, char c)
 {
 	int	i;
 	int	j;
@@ -92,6 +107,10 @@ int	slice(char **slices, char const *s, char c)
 	return (0);
 }
 
+/* ft_split()
+ * splits the string *s between c characters, then returns an array of strings
+ * containing all the newly created substrings.
+*/
 char	**ft_split(char const *s, char c)
 {
 	char	**slices;

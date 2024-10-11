@@ -12,6 +12,12 @@
 
 #include "libft.h"
 
+/* ft_memmove()
+ * this function copies len bytes from *src to *dst in a non-destructive manner,
+ * which means that if an overlap between both memory areas occurs, the copy
+ * will still work fine.
+ * returns a pointer to dst.
+*/
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	size_t	i;

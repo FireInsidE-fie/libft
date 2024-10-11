@@ -10,6 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/* ft_isalpha()
+ * checks if a character is alphabetic
+ * returns 1 if yes, 0 if not
+*/
 int	ft_isalpha(int c)
 {
 	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))

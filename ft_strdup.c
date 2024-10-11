@@ -12,6 +12,9 @@
 
 #include "libft.h"
 
+/* ft_strdup()
+ * allocates and copies *s1, returns a pointer to the copy.
+*/
 char	*ft_strdup(const char *s1)
 {
 	int		str_length;

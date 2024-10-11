@@ -12,6 +12,11 @@
 
 #include "libft.h"
 
+/* ft_strmapi()
+ * iterates through the string *s, applying the f() function to each character
+ * and storing the result into a new string.
+ * returns the new string with altered contents.
+*/
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	int		i;

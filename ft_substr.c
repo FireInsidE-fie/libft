@@ -12,6 +12,10 @@
 
 #include "libft.h"
 
+/* ft_substr()
+ * allocates a substring from the string s, starting from index start, that is
+ * len characters long, then returns it
+*/
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*substring;

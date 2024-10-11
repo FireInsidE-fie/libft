@@ -12,6 +12,10 @@
 
 #include "libft.h"
 
+/* ft_strlcat()
+ * concatenates the *dst and *src strings inside a new string of size dstsize.
+ * keep in mind this might cut src or even dst if dstsize if insufficient.
+*/
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	size_t	i;

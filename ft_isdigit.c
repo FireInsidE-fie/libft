@@ -10,6 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/* ft_isascii()
+ * checks if a character is a digit or not
+ * returns 1 if yes, 0 if not
+*/
 int	ft_isdigit(int c)
 {
 	if (c >= '0' && c <= '9')

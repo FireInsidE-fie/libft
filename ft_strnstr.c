@@ -12,6 +12,11 @@
 
 #include "libft.h" 
 
+/* ft_strnstr()
+ * locates a substring needle inside the haystack string.
+ * Returns : If needle is empty, haystack, if no needle in haystack, NULL,
+ * otherwise a pointer to the first character of the substring found.
+*/
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	size_t	i;

@@ -12,6 +12,10 @@
 
 #include "libft.h"
 
+/* ft_lstclear()
+ * clears a list and every item, using the del function to remove the content
+ * of each item. each item is then free()d.
+*/
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
 	t_list	*next_item;

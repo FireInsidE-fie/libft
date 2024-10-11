@@ -12,6 +12,9 @@
 
 #include "libft.h"
 
+/* ft_calloc()
+ * allocates memory according to count * size bytes, then sets it all to 0
+*/
 void	*ft_calloc(size_t count, size_t size)
 {
 	void	*area;

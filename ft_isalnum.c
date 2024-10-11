@@ -10,6 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/* ft_isalnum()
+ * checks if a character is alphanumeric
+ * returns 1 if yes, 0 if not
+*/
 int	ft_isalnum(int c)
 {
 	if (

@@ -10,6 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/* ft_tolower()
+ * returns the c character in lowercase
+*/
 int	ft_tolower(int c)
 {
 	if (c >= 'A' && c <= 'Z')

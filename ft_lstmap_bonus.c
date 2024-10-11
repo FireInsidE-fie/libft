@@ -12,6 +12,12 @@
 
 #include "libft.h"
 
+/* ft_lstmap()
+ * iterates through the list pointed to by *lst, applying the function f() to
+ * each item's content and storing the result inside a newly created list
+ * del() is used in case of a failure to allocate the new list
+ * returns the newly created list with altered content
+*/
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*new_lst;	

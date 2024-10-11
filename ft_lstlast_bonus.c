@@ -12,6 +12,9 @@
 
 #include "libft.h"
 
+/* ft_lstlast()
+ * returns a pointer to the last item of the list pointed to by *lst.
+*/
 t_list	*ft_lstlast(t_list *lst)
 {
 	if (!lst)

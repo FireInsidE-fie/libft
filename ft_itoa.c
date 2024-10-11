@@ -12,14 +12,18 @@
 
 #include "libft.h"
 
-static int	ft_get_char_count(int n)
+/* get_char_count()
+ * takes an integer as parameter and returns the number of digits it is composed
+ * of. if negative, the minus sign is counted as an additional digit.
+ * as such, the max number of digits this function will return is the number of
+ * digits for INT_MAX + 1.
+*/
+static int	get_char_count(int n)
 {
 	int	i;
 	int	count;
 
 	count = 1;
-	if (n == -2147483648)
-		return (11);
 	if (n < 0)
 	{
 		count++;
@@ -34,6 +38,10 @@ static int	ft_get_char_count(int n)
 	return (count);
 }
 
+/* ft_itoa()
+ * this function takes an integer as an argument and returns its translation as
+ * a string. negative values are supported.
+*/
 char	*ft_itoa(int n)
 {
 	int		char_count;
@@ -42,7 +50,7 @@ char	*ft_itoa(int n)
 
 	if (n == -2147483648)
 		return (ft_strdup("-2147483648"));
-	char_count = ft_get_char_count(n);
+	char_count = get_char_count(n);
 	str = malloc((char_count + 1) * sizeof(char));
 	if (!str)
 		return (NULL);

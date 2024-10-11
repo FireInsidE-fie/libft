@@ -12,6 +12,12 @@
 
 #include <stdio.h>
 
+/* ft_memcmp()
+ * compares two memory areas *s1 and *s2 for n bytes and tries to find a
+ * difference.
+ * if found, it returns the size difference between both bytes as unsigned chars
+ * if not, it returns 0.
+*/
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	while (n > 0)

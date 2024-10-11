@@ -10,6 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/* ft_isascii()
+ * checks if a character is an ascii characteer or not (any char between 0 and
+ * octal 0177 inclusive, man isascii(3))
+ * returns 1 if yes, 0 if not
+*/
 int	ft_isascii(int c)
 {
 	if (c >= 0 && c <= 0177)

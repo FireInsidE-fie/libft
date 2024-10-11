@@ -58,7 +58,7 @@ $(NAME): $(OBJS)
 	$(AR) $(ARFLAGS) $@ $^
 %.o: %.c
 	$(CC) $(CFLAGS) -include $(INCL) -c $< -o $@ 
-bonus: $(BONUS_OBJS)
+bonus: $(OBJS) $(BONUS_OBJS)
 	$(AR) $(ARFLAGS) $(NAME) $^
 clean:
 	$(RM) $(RMFLAGS) $(OBJS) $(BONUS_OBJS)

@@ -10,6 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/* ft_striteri()
+ * iterates through the *s string, applying the f() function to each character.
+*/
 void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
 	int	i;

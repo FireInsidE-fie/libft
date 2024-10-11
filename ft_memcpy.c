@@ -12,12 +12,16 @@
 
 #include "libft.h"
 
+/* ft_memcpy()
+ * copies n bytes from *src to *dst.
+ * returns a pointer to dst.
+*/
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
 	void	*original;
 	size_t	i;
 
-	original = (void *)dst;
+	original = dst;
 	if (!dst && !src)
 		return (original);
 	i = 0;

@@ -12,6 +12,10 @@
 
 #include "libft.h"
 
+/* ft_lstdelone()
+ * deletes the item pointed by *lst, using the del() function for the content,
+ * then freeing the item.
+*/
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
 	del(lst->content);

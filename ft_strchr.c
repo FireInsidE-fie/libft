@@ -10,6 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/* ft_strchr()
+ * locates the first occurence of the character c inside of *s, and returns a
+ * pointer to it.
+*/
 char	*ft_strchr(const char *s, int c)
 {
 	while (*s)

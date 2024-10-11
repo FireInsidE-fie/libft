@@ -10,6 +10,12 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/* ft_atoi()
+ * translates an int from its character representation to an int
+ * takes into account whitespace (isspace(3)) and one (1) minus or plus sign
+ * as prefixes
+ * keep in mind the number has to be contained within an integer
+*/
 int	ft_atoi(const char *str)
 {
 	int	i;

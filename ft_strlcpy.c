@@ -12,6 +12,9 @@
 
 #include "libft.h"
 
+/* ft_strlcpy()
+ * copies dstsize chars from *src to *dst, then returns the size of src.
+*/
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
 	size_t	i;
